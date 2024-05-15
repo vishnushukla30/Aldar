@@ -18,12 +18,12 @@ provider "azurerm" {
     subscription_id = var.subscription_id  #this is the subscription id of the subscription where the resources will be created
 }
 module "rg" {
-    source = "./modules/ResourceGroup"
+    source = "./modules/ResourcesGrp"
     resource_group_name = var.resource_group_name
     location = var.location
 }
 module "appservice" {
-    source = "./modules/AppService"
+    source = "./modules/AppSvc"
     resource_group_name = var.resource_group_name
     location = var.location
     vnet_name = var.vnet_name

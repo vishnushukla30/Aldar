@@ -23,7 +23,7 @@ variable "vnet_address_space" {
 }
 variable "subnet_address_prefix" {
   type = list(string)
-  default = ["10.0.0.0/24"]
+  default = ["10.0.1.0/24"]
 }
 
 variable "service_plan_name" {

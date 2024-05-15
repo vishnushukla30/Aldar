@@ -10,12 +10,12 @@ terraform {
         resource_group_name  = "<storage_account_resource_group>"
         storage_account_name = "<your-storage-account-name>"
         container_name       = "<container_name>"
-        key                  = "<statefile_name>" #we can modify this to be more dynamic for other projects
+        key                  = "<statefile_name>"
     }
 }
 provider "azurerm" {
     features {}
-    subscription_id = var.subscription_id  #this is the subscription id of the subscription where the resources will be created
+    subscription_id = var.subscription_id
 }
 module "rg" {
     source = "./modules/ResourcesGrp"

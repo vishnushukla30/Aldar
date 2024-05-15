@@ -20,7 +20,8 @@ variable "state_file" {
 }
 variable "resource_group_name" {
   type = string
-  default = "appservice-rg" 
+  default = "appservice-rg"
+} 
 variable "vnet_name" {
   type = string
   default = "vnet-service1"

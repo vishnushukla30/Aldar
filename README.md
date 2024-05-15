@@ -6,22 +6,38 @@ This Terraform project deploys an Azure App Service with multiple deployment slo
 
 Configuration Setup: Ensure Terraform and Azure CLI are installed, and Azure CLI is configured. Gather Azure subscription ID, storage account name, resource group name, and container name.
 
+Variables_name:
+subscription_id - ID of the subscription
+location - Resource location
+resource_group_name - Name of the resource group
+app_service_name - Name of the app service
+service_plan_name - Plan for the app service
+sku_name - SKU name
+os_type - Operating system type
+slot_name - Deployment slot name
+slot_count - Number of deployment slots
+vnet_name - Name of the VNet
+vnet_address_space - Address space of VNet
+subnet_name - Name of the subnet
+subnet_address_prefix - Address prefix of the subnet
+
 Azure_Resources: Resource Group, VNet with Subnets, App Service Plan, App Service, Deployment Slots.
 
 Assessment explanations: 
 
-The "modules" directory holds modules for app service and its dependencies:
+The Module directory holds modules for app service and its dependencies:
 
-AppService: Creates the app service
-AppServicePlan: Creates the app service plan
-ResourceGroup: Creates the resource group
-Subnet: Creates the subnet
+AppSvc: Creates the app service
+AppSvcPlan: Creates the app service plan
+ResourcesGrp: Creates the resource group
+Subnets: Creates the subnet
 VNet: Creates the virtual network
-Naming conventions use prefixes:
 
-AppService: appservice-<app_service_name>
-AppServicePlan: plan-<service_plan_name>
-ResourceGroup: rg-<resource_group_name>
-Subnet: snet-<subnet_name>
+AppSvc: appservice-<app_service_name>
+AppSvcPlan: plan-<service_plan_name>
+ResourcesGrp: rg-<resource_group_name>
+Subnets: snet-<subnet_name>
 VNet: vnet-<vnet_name>
-Modules are orchestrated in main.tf of AppService module. On running terraform apply, ResourceGroup module executes first, followed by AppService module, and then others in sequence.
+Modules are orchestrated in main.tf of AppService module. On running terraform apply, the ResourceGroup module executes first, followed by the AppService module, and then others in sequence.
+
+

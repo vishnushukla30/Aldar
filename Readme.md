@@ -27,6 +27,9 @@ Assessment explanations:
 
 The Module directory holds modules for app service and its dependencies:
 
+<img width="276" alt="image" src="https://github.com/vishnushukla30/Aldar/assets/25581203/d2e299e7-8368-4676-ae8e-cf2b91aab4b3">
+
+
 AppSvc: Creates the app service
 AppSvcPlan: Creates the app service plan
 ResourcesGrp: Creates the resource group

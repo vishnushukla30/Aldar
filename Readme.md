@@ -41,6 +41,7 @@ AppSvcPlan: plan-<service_plan_name>
 ResourcesGrp: rg-<resource_group_name>
 Subnets: snet-<subnet_name>
 VNet: vnet-<vnet_name>
-Modules are orchestrated in main.tf of AppService module. On running terraform apply, the ResourceGroup module executes first, followed by the AppService module, and then others in sequence.
+Modules are orchestrated in main.tf of AppService module. 
+On running terraform apply, the ResourceGroup module executes first, followed by the AppService module, and then others in continuous sequence.
 
 

@@ -41,7 +41,7 @@ variable "app_service_name" {
 variable "slot_count" {
   type = number
   default = 1
-  description = "app service slot to create"
+  description = "app service slots to create"
 }
 variable "slot_name" {
   type = string
